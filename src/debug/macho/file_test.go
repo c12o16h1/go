@@ -6,7 +6,7 @@ package macho
 
 import (
 	"bytes"
-	"internal/obscuretestdata"
+	"github.com/c12o16h1/go/src/internal/obscuretestdata"
 	"io"
 	"reflect"
 	"testing"

@@ -6,8 +6,8 @@ package net
 
 import (
 	"context"
-	"internal/nettrace"
-	"internal/poll"
+	"github.com/c12o16h1/go/src/internal/nettrace"
+	"github.com/c12o16h1/go/src/internal/poll"
 	"syscall"
 	"time"
 )

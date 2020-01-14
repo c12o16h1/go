@@ -13,7 +13,7 @@ import (
 	"go/ast"
 	"go/printer"
 	"go/token"
-	"internal/xcoff"
+	"github.com/c12o16h1/go/src/internal/xcoff"
 	"io"
 	"io/ioutil"
 	"os"

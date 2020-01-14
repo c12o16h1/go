@@ -236,7 +236,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"io"
 	"os"
 	"runtime"

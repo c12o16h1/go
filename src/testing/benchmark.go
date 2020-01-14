@@ -7,7 +7,7 @@ package testing
 import (
 	"flag"
 	"fmt"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"io"
 	"math"
 	"os"

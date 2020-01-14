@@ -54,8 +54,8 @@ func isRuntimeDepPkg(pkg string) bool {
 	switch pkg {
 	case "runtime",
 		"sync/atomic",      // runtime may call to sync/atomic, due to go:linkname
-		"internal/bytealg", // for IndexByte
-		"internal/cpu":     // for cpu features
+		"github.com/c12o16h1/go/src/internal/bytealg", // for IndexByte
+		"github.com/c12o16h1/go/src/internal/cpu":     // for cpu features
 		return true
 	}
 	return strings.HasPrefix(pkg, "runtime/internal/") && !strings.HasSuffix(pkg, "_test")

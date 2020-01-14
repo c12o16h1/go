@@ -7,8 +7,8 @@
 package os
 
 import (
-	"internal/poll"
-	"internal/syscall/unix"
+	"github.com/c12o16h1/go/src/internal/poll"
+	"github.com/c12o16h1/go/src/internal/syscall/unix"
 	"io"
 	"runtime"
 	"syscall"

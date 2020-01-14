@@ -20,7 +20,7 @@ import (
 	"cmd/internal/sys"
 	"flag"
 	"fmt"
-	"internal/goversion"
+	"github.com/c12o16h1/go/src/internal/goversion"
 	"io"
 	"io/ioutil"
 	"log"

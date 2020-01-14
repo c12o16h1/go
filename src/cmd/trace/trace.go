@@ -7,7 +7,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"internal/trace"
+	"github.com/c12o16h1/go/src/internal/trace"
 	"io"
 	"log"
 	"math"

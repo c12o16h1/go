@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"go/build"
-	"internal/goroot"
+	"github.com/c12o16h1/go/src/internal/goroot"
 	"os"
 	"path/filepath"
 	"sort"

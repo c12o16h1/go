@@ -9,7 +9,7 @@ package net
 import (
 	"context"
 	"fmt"
-	"internal/poll"
+	"github.com/c12o16h1/go/src/internal/poll"
 	"io"
 	"io/ioutil"
 	"net/internal/socktest"

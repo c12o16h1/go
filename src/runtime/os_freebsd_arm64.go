@@ -4,7 +4,7 @@
 
 package runtime
 
-import "internal/cpu"
+import "github.com/c12o16h1/go/src/internal/cpu"
 
 const (
 	hwcap_FP       = 1 << 0

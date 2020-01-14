@@ -49,7 +49,7 @@ package context
 
 import (
 	"errors"
-	"internal/reflectlite"
+	"github.com/c12o16h1/go/src/internal/reflectlite"
 	"sync"
 	"sync/atomic"
 	"time"

@@ -8,7 +8,7 @@ package windows_test
 
 import (
 	"fmt"
-	"internal/syscall/windows"
+	"github.com/c12o16h1/go/src/internal/syscall/windows"
 	"os"
 	"os/exec"
 	"syscall"

@@ -7,7 +7,7 @@ package codehost
 import (
 	"errors"
 	"fmt"
-	"internal/lazyregexp"
+	"github.com/c12o16h1/go/src/internal/lazyregexp"
 	"io"
 	"io/ioutil"
 	"os"

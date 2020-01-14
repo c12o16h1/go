@@ -12,7 +12,7 @@ package testdeps
 
 import (
 	"bufio"
-	"internal/testlog"
+	"github.com/c12o16h1/go/src/internal/testlog"
 	"io"
 	"regexp"
 	"runtime/pprof"

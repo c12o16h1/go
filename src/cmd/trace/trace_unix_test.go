@@ -8,7 +8,7 @@ package main
 
 import (
 	"bytes"
-	traceparser "internal/trace"
+	traceparser "github.com/c12o16h1/go/src/internal/trace"
 	"io/ioutil"
 	"runtime"
 	"runtime/trace"

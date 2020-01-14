@@ -4,7 +4,7 @@
 
 package os
 
-import "internal/testlog"
+import "github.com/c12o16h1/go/src/internal/testlog"
 
 // Stat returns a FileInfo describing the named file.
 // If there is an error, it will be of type *PathError.

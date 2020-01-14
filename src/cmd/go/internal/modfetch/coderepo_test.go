@@ -9,7 +9,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"hash"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"io"
 	"io/ioutil"
 	"log"

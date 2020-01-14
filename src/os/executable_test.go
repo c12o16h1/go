@@ -6,7 +6,7 @@ package os_test
 
 import (
 	"fmt"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"os"
 	osexec "os/exec"
 	"path/filepath"

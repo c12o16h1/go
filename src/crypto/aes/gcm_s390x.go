@@ -10,7 +10,7 @@ import (
 	"crypto/subtle"
 	"encoding/binary"
 	"errors"
-	"internal/cpu"
+	"github.com/c12o16h1/go/src/internal/cpu"
 )
 
 // This file contains two implementations of AES-GCM. The first implementation

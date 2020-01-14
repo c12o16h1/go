@@ -9,8 +9,8 @@ package net
 import (
 	"bufio"
 	"context"
-	"internal/poll"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/poll"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"io"
 	"os"
 	"runtime"

@@ -21,7 +21,7 @@ import (
 	"errors"
 	"fmt"
 	"go/token"
-	"internal/nettrace"
+	"github.com/c12o16h1/go/src/internal/nettrace"
 	"io"
 	"io/ioutil"
 	"log"

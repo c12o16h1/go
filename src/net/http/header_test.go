@@ -6,7 +6,7 @@ package http
 
 import (
 	"bytes"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"reflect"
 	"runtime"
 	"testing"

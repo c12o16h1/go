@@ -5,7 +5,7 @@
 package sync_test
 
 import (
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"runtime"
 	. "sync"
 	"sync/atomic"

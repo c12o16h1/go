@@ -8,7 +8,7 @@ package http
 
 import (
 	"bytes"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"net/url"
 	"os/exec"
 	"reflect"

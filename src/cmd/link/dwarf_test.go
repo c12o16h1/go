@@ -9,7 +9,7 @@ import (
 	cmddwarf "cmd/internal/dwarf"
 	"cmd/internal/objfile"
 	"debug/dwarf"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"io/ioutil"
 	"os"
 	"os/exec"

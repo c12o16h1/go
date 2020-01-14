@@ -6,8 +6,8 @@ package os
 
 import (
 	"errors"
-	"internal/poll"
-	"internal/syscall/windows"
+	"github.com/c12o16h1/go/src/internal/poll"
+	"github.com/c12o16h1/go/src/internal/syscall/windows"
 	"runtime"
 	"syscall"
 	"unicode/utf16"

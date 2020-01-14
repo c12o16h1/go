@@ -5,8 +5,8 @@
 package cpu_test
 
 import (
-	. "internal/cpu"
-	"internal/testenv"
+	. "github.com/c12o16h1/go/src/internal/cpu"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"os"
 	"os/exec"
 	"runtime"

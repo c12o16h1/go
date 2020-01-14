@@ -13,7 +13,7 @@ import (
 	"cmd/internal/src"
 	"cmd/internal/sys"
 	"fmt"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"math/rand"
 	"sort"
 	"sync"

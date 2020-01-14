@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"encoding/binary"
 	"encoding/hex"
-	"internal/obscuretestdata"
+	"github.com/c12o16h1/go/src/internal/obscuretestdata"
 	"io"
 	"io/ioutil"
 	"os"

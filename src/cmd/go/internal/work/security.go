@@ -31,7 +31,7 @@ package work
 
 import (
 	"fmt"
-	"internal/lazyregexp"
+	"github.com/c12o16h1/go/src/internal/lazyregexp"
 	"regexp"
 	"strings"
 

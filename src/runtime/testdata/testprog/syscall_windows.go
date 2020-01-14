@@ -5,7 +5,7 @@
 package main
 
 import (
-	"internal/syscall/windows"
+	"github.com/c12o16h1/go/src/internal/syscall/windows"
 	"runtime"
 	"sync"
 	"syscall"

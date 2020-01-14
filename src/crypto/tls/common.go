@@ -17,7 +17,7 @@ import (
 	"crypto/x509"
 	"errors"
 	"fmt"
-	"internal/cpu"
+	"github.com/c12o16h1/go/src/internal/cpu"
 	"io"
 	"math/big"
 	"net"

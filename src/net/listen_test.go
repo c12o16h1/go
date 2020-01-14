@@ -9,7 +9,7 @@ package net
 import (
 	"context"
 	"fmt"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"os"
 	"runtime"
 	"syscall"

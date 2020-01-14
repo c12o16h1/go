@@ -9,7 +9,7 @@
 package syscall
 
 import (
-	"internal/bytealg"
+	"github.com/c12o16h1/go/src/internal/bytealg"
 	"runtime"
 	"sync"
 	"unsafe"

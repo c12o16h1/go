@@ -6,7 +6,7 @@ package get
 
 import (
 	"errors"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"io/ioutil"
 	"os"
 	"path"

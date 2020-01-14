@@ -8,7 +8,7 @@
 
 package crc32
 
-import "internal/cpu"
+import "github.com/c12o16h1/go/src/internal/cpu"
 
 func castagnoliUpdate(crc uint32, p []byte) uint32
 func ieeeUpdate(crc uint32, p []byte) uint32

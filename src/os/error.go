@@ -5,8 +5,8 @@
 package os
 
 import (
-	"internal/oserror"
-	"internal/poll"
+	"github.com/c12o16h1/go/src/internal/oserror"
+	"github.com/c12o16h1/go/src/internal/poll"
 )
 
 // Portable analogs of some common system call errors.

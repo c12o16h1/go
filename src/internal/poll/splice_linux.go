@@ -5,7 +5,7 @@
 package poll
 
 import (
-	"internal/syscall/unix"
+	"github.com/c12o16h1/go/src/internal/syscall/unix"
 	"sync/atomic"
 	"syscall"
 	"unsafe"

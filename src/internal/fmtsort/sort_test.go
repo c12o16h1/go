@@ -6,7 +6,7 @@ package fmtsort_test
 
 import (
 	"fmt"
-	"internal/fmtsort"
+	"github.com/c12o16h1/go/src/internal/fmtsort"
 	"math"
 	"reflect"
 	"strings"

@@ -10,7 +10,7 @@ import (
 	"errors"
 	"fmt"
 	"go/build"
-	"internal/lazyregexp"
+	"github.com/c12o16h1/go/src/internal/lazyregexp"
 	"io/ioutil"
 	"os"
 	"path"

@@ -6,8 +6,8 @@ package poll
 
 import (
 	"errors"
-	"internal/race"
-	"internal/syscall/windows"
+	"github.com/c12o16h1/go/src/internal/race"
+	"github.com/c12o16h1/go/src/internal/syscall/windows"
 	"io"
 	"runtime"
 	"sync"

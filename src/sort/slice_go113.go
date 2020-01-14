@@ -6,7 +6,7 @@
 
 package sort
 
-import "internal/reflectlite"
+import "github.com/c12o16h1/go/src/internal/reflectlite"
 
 var reflectValueOf = reflectlite.ValueOf
 var reflectSwapper = reflectlite.Swapper

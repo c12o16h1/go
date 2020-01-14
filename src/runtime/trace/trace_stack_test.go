@@ -7,8 +7,8 @@ package trace_test
 import (
 	"bytes"
 	"fmt"
-	"internal/testenv"
-	"internal/trace"
+	"github.com/c12o16h1/go/src/internal/testenv"
+	"github.com/c12o16h1/go/src/internal/trace"
 	"net"
 	"os"
 	"runtime"
@@ -243,7 +243,7 @@ func TestTraceSymbolize(t *testing.T) {
 	if runtime.GOOS != "windows" && runtime.GOOS != "plan9" {
 		want = append(want, []eventDesc{
 			{trace.EvGoBlockNet, []frame{
-				{"internal/poll.(*FD).Accept", 0},
+				{"github.com/c12o16h1/go/src/internal/poll.(*FD).Accept", 0},
 				{"net.(*netFD).accept", 0},
 				{"net.(*TCPListener).accept", 0},
 				{"net.(*TCPListener).Accept", 0},
@@ -252,7 +252,7 @@ func TestTraceSymbolize(t *testing.T) {
 			{trace.EvGoSysCall, []frame{
 				{"syscall.read", 0},
 				{"syscall.Read", 0},
-				{"internal/poll.(*FD).Read", 0},
+				{"github.com/c12o16h1/go/src/internal/poll.(*FD).Read", 0},
 				{"os.(*File).read", 0},
 				{"os.(*File).Read", 0},
 				{"runtime/trace_test.TestTraceSymbolize.func11", 0},

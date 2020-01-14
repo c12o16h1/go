@@ -5,7 +5,7 @@
 package time_test
 
 import (
-	"internal/syscall/windows/registry"
+	"github.com/c12o16h1/go/src/internal/syscall/windows/registry"
 	"testing"
 	. "time"
 )

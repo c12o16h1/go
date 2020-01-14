@@ -62,7 +62,7 @@ func (gcToolchain) gc(b *Builder, a *Action, archive string, importcfg []byte, s
 	}
 	compilingRuntime := p.Standard && (p.ImportPath == "runtime" || strings.HasPrefix(p.ImportPath, "runtime/internal"))
 	// The runtime package imports a couple of general internal packages.
-	if p.Standard && (p.ImportPath == "internal/cpu" || p.ImportPath == "internal/bytealg") {
+	if p.Standard && (p.ImportPath == "github.com/c12o16h1/go/src/internal/cpu" || p.ImportPath == "github.com/c12o16h1/go/src/internal/bytealg") {
 		compilingRuntime = true
 	}
 	if compilingRuntime {
@@ -79,7 +79,7 @@ func (gcToolchain) gc(b *Builder, a *Action, archive string, importcfg []byte, s
 	extFiles := len(p.CgoFiles) + len(p.CFiles) + len(p.CXXFiles) + len(p.MFiles) + len(p.FFiles) + len(p.SFiles) + len(p.SysoFiles) + len(p.SwigFiles) + len(p.SwigCXXFiles)
 	if p.Standard {
 		switch p.ImportPath {
-		case "bytes", "internal/poll", "net", "os", "runtime/pprof", "runtime/trace", "sync", "syscall", "time":
+		case "bytes", "github.com/c12o16h1/go/src/internal/poll", "net", "os", "runtime/pprof", "runtime/trace", "sync", "syscall", "time":
 			extFiles++
 		}
 	}

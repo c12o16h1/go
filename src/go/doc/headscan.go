@@ -22,7 +22,7 @@ import (
 	"go/doc"
 	"go/parser"
 	"go/token"
-	"internal/lazyregexp"
+	"github.com/c12o16h1/go/src/internal/lazyregexp"
 	"os"
 	"path/filepath"
 	"runtime"

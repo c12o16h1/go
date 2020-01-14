@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
-	"internal/goroot"
+	"github.com/c12o16h1/go/src/internal/goroot"
 	"os"
 	"path/filepath"
 	"runtime/debug"

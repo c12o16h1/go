@@ -10,7 +10,7 @@ import (
 	"bytes"
 	"fmt"
 	"go/build"
-	"internal/cfg"
+	"github.com/c12o16h1/go/src/internal/cfg"
 	"io/ioutil"
 	"os"
 	"path/filepath"

@@ -12,7 +12,7 @@ import (
 	"go/ast"
 	"go/importer"
 	"go/parser"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"sort"
 	"strings"
 	"testing"

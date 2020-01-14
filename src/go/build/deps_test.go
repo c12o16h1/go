@@ -34,19 +34,19 @@ import (
 //
 var pkgDeps = map[string][]string{
 	// L0 is the lowest level, core, nearly unavoidable packages.
-	"errors":                  {"runtime", "internal/reflectlite"},
+	"errors":                  {"runtime", "github.com/c12o16h1/go/src/internal/reflectlite"},
 	"io":                      {"errors", "sync", "sync/atomic"},
-	"runtime":                 {"unsafe", "runtime/internal/atomic", "runtime/internal/sys", "runtime/internal/math", "internal/cpu", "internal/bytealg"},
+	"runtime":                 {"unsafe", "runtime/internal/atomic", "runtime/internal/sys", "runtime/internal/math", "github.com/c12o16h1/go/src/internal/cpu", "github.com/c12o16h1/go/src/internal/bytealg"},
 	"runtime/internal/sys":    {},
-	"runtime/internal/atomic": {"unsafe", "internal/cpu"},
+	"runtime/internal/atomic": {"unsafe", "github.com/c12o16h1/go/src/internal/cpu"},
 	"runtime/internal/math":   {"runtime/internal/sys"},
-	"internal/race":           {"runtime", "unsafe"},
-	"sync":                    {"internal/race", "runtime", "sync/atomic", "unsafe"},
+	"github.com/c12o16h1/go/src/internal/race":           {"runtime", "unsafe"},
+	"sync":                    {"github.com/c12o16h1/go/src/internal/race", "runtime", "sync/atomic", "unsafe"},
 	"sync/atomic":             {"unsafe"},
 	"unsafe":                  {},
-	"internal/cpu":            {},
-	"internal/bytealg":        {"unsafe", "internal/cpu"},
-	"internal/reflectlite":    {"runtime", "unsafe"},
+	"github.com/c12o16h1/go/src/internal/cpu":            {},
+	"github.com/c12o16h1/go/src/internal/bytealg":        {"unsafe", "github.com/c12o16h1/go/src/internal/cpu"},
+	"github.com/c12o16h1/go/src/internal/reflectlite":    {"runtime", "unsafe"},
 
 	"L0": {
 		"errors",
@@ -56,14 +56,14 @@ var pkgDeps = map[string][]string{
 		"sync",
 		"sync/atomic",
 		"unsafe",
-		"internal/cpu",
-		"internal/bytealg",
-		"internal/reflectlite",
+		"github.com/c12o16h1/go/src/internal/cpu",
+		"github.com/c12o16h1/go/src/internal/bytealg",
+		"github.com/c12o16h1/go/src/internal/reflectlite",
 	},
 
 	// L1 adds simple functions and strings processing,
 	// but not Unicode tables.
-	"math":          {"internal/cpu", "unsafe", "math/bits"},
+	"math":          {"github.com/c12o16h1/go/src/internal/cpu", "unsafe", "math/bits"},
 	"math/bits":     {"unsafe"},
 	"math/cmplx":    {"math"},
 	"math/rand":     {"L0", "math"},
@@ -118,9 +118,9 @@ var pkgDeps = map[string][]string{
 	"image":                  {"L2", "image/color"}, // interfaces
 	"image/color":            {"L2"},                // interfaces
 	"image/color/palette":    {"L2", "image/color"},
-	"internal/fmtsort":       {"reflect", "sort"},
+	"github.com/c12o16h1/go/src/internal/fmtsort":       {"reflect", "sort"},
 	"reflect":                {"L2"},
-	"sort":                   {"internal/reflectlite"},
+	"sort":                   {"github.com/c12o16h1/go/src/internal/reflectlite"},
 
 	"L3": {
 		"L2",
@@ -139,20 +139,20 @@ var pkgDeps = map[string][]string{
 		"image",
 		"image/color",
 		"image/color/palette",
-		"internal/fmtsort",
-		"internal/oserror",
+		"github.com/c12o16h1/go/src/internal/fmtsort",
+		"github.com/c12o16h1/go/src/internal/oserror",
 		"reflect",
 	},
 
 	// End of linear dependency definitions.
 
 	// Operating system access.
-	"syscall":                           {"L0", "internal/oserror", "internal/race", "internal/syscall/windows/sysdll", "syscall/js", "unicode/utf16"},
+	"syscall":                           {"L0", "github.com/c12o16h1/go/src/internal/oserror", "github.com/c12o16h1/go/src/internal/race", "github.com/c12o16h1/go/src/internal/syscall/windows/sysdll", "syscall/js", "unicode/utf16"},
 	"syscall/js":                        {"L0"},
-	"internal/oserror":                  {"L0"},
-	"internal/syscall/unix":             {"L0", "syscall"},
-	"internal/syscall/windows":          {"L0", "syscall", "internal/syscall/windows/sysdll", "unicode/utf16"},
-	"internal/syscall/windows/registry": {"L0", "syscall", "internal/syscall/windows/sysdll", "unicode/utf16"},
+	"github.com/c12o16h1/go/src/internal/oserror":                  {"L0"},
+	"github.com/c12o16h1/go/src/internal/syscall/unix":             {"L0", "syscall"},
+	"github.com/c12o16h1/go/src/internal/syscall/windows":          {"L0", "syscall", "github.com/c12o16h1/go/src/internal/syscall/windows/sysdll", "unicode/utf16"},
+	"github.com/c12o16h1/go/src/internal/syscall/windows/registry": {"L0", "syscall", "github.com/c12o16h1/go/src/internal/syscall/windows/sysdll", "unicode/utf16"},
 	"time": {
 		// "L0" without the "io" package:
 		"errors",
@@ -162,16 +162,16 @@ var pkgDeps = map[string][]string{
 		"sync/atomic",
 		"unsafe",
 		// Other time dependencies:
-		"internal/syscall/windows/registry",
+		"github.com/c12o16h1/go/src/internal/syscall/windows/registry",
 		"syscall",
 		"syscall/js",
 	},
 
-	"internal/cfg":     {"L0"},
-	"internal/poll":    {"L0", "internal/oserror", "internal/race", "syscall", "time", "unicode/utf16", "unicode/utf8", "internal/syscall/windows", "internal/syscall/unix"},
-	"internal/testlog": {"L0"},
-	"os":               {"L1", "os", "syscall", "time", "internal/oserror", "internal/poll", "internal/syscall/windows", "internal/syscall/unix", "internal/testlog"},
-	"path/filepath":    {"L2", "os", "syscall", "internal/syscall/windows"},
+	"github.com/c12o16h1/go/src/internal/cfg":     {"L0"},
+	"github.com/c12o16h1/go/src/internal/poll":    {"L0", "github.com/c12o16h1/go/src/internal/oserror", "github.com/c12o16h1/go/src/internal/race", "syscall", "time", "unicode/utf16", "unicode/utf8", "github.com/c12o16h1/go/src/internal/syscall/windows", "github.com/c12o16h1/go/src/internal/syscall/unix"},
+	"github.com/c12o16h1/go/src/internal/testlog": {"L0"},
+	"os":               {"L1", "os", "syscall", "time", "github.com/c12o16h1/go/src/internal/oserror", "github.com/c12o16h1/go/src/internal/poll", "github.com/c12o16h1/go/src/internal/syscall/windows", "github.com/c12o16h1/go/src/internal/syscall/unix", "github.com/c12o16h1/go/src/internal/testlog"},
+	"path/filepath":    {"L2", "os", "syscall", "github.com/c12o16h1/go/src/internal/syscall/windows"},
 	"io/ioutil":        {"L2", "os", "path/filepath", "time"},
 	"os/exec":          {"L2", "os", "context", "path/filepath", "syscall"},
 	"os/signal":        {"L2", "os", "syscall"},
@@ -187,7 +187,7 @@ var pkgDeps = map[string][]string{
 	},
 
 	// Formatted I/O: few dependencies (L1) but we must add reflect and internal/fmtsort.
-	"fmt": {"L1", "os", "reflect", "internal/fmtsort"},
+	"fmt": {"L1", "os", "reflect", "github.com/c12o16h1/go/src/internal/fmtsort"},
 	"log": {"L1", "os", "fmt", "time"},
 
 	// Packages used by testing must be low-level (L2+fmt).
@@ -198,13 +198,13 @@ var pkgDeps = map[string][]string{
 	"runtime/trace":  {"L0", "context", "fmt"},
 	"text/tabwriter": {"L2"},
 
-	"testing":                  {"L2", "flag", "fmt", "internal/race", "os", "runtime/debug", "runtime/pprof", "runtime/trace", "time"},
+	"testing":                  {"L2", "flag", "fmt", "github.com/c12o16h1/go/src/internal/race", "os", "runtime/debug", "runtime/pprof", "runtime/trace", "time"},
 	"testing/iotest":           {"L2", "log"},
 	"testing/quick":            {"L2", "flag", "fmt", "reflect", "time"},
-	"internal/obscuretestdata": {"L2", "OS", "encoding/base64"},
-	"internal/testenv":         {"L2", "OS", "flag", "testing", "syscall", "internal/cfg"},
-	"internal/lazyregexp":      {"L2", "OS", "regexp"},
-	"internal/lazytemplate":    {"L2", "OS", "text/template"},
+	"github.com/c12o16h1/go/src/internal/obscuretestdata": {"L2", "OS", "encoding/base64"},
+	"github.com/c12o16h1/go/src/internal/testenv":         {"L2", "OS", "flag", "testing", "syscall", "github.com/c12o16h1/go/src/internal/cfg"},
+	"github.com/c12o16h1/go/src/internal/lazyregexp":      {"L2", "OS", "regexp"},
+	"github.com/c12o16h1/go/src/internal/lazytemplate":    {"L2", "OS", "text/template"},
 
 	// L4 is defined as L3+fmt+log+time, because in general once
 	// you're using L3 packages, use of fmt, log, or time is not a big deal.
@@ -217,7 +217,7 @@ var pkgDeps = map[string][]string{
 
 	// Go parser.
 	"go/ast":     {"L4", "OS", "go/scanner", "go/token"},
-	"go/doc":     {"L4", "OS", "go/ast", "go/token", "regexp", "internal/lazyregexp", "text/template"},
+	"go/doc":     {"L4", "OS", "go/ast", "go/token", "regexp", "github.com/c12o16h1/go/src/internal/lazyregexp", "text/template"},
 	"go/parser":  {"L4", "OS", "go/ast", "go/scanner", "go/token"},
 	"go/printer": {"L4", "OS", "go/ast", "go/scanner", "go/token", "text/tabwriter"},
 	"go/scanner": {"L4", "OS", "go/token"},
@@ -232,14 +232,14 @@ var pkgDeps = map[string][]string{
 		"go/token",
 	},
 
-	"go/format":       {"L4", "GOPARSER", "internal/format"},
-	"internal/format": {"L4", "GOPARSER"},
+	"go/format":       {"L4", "GOPARSER", "github.com/c12o16h1/go/src/internal/format"},
+	"github.com/c12o16h1/go/src/internal/format": {"L4", "GOPARSER"},
 
 	// Go type checking.
 	"go/constant":               {"L4", "go/token", "math/big"},
 	"go/importer":               {"L4", "go/build", "go/internal/gccgoimporter", "go/internal/gcimporter", "go/internal/srcimporter", "go/token", "go/types"},
 	"go/internal/gcimporter":    {"L4", "OS", "go/build", "go/constant", "go/token", "go/types", "text/scanner"},
-	"go/internal/gccgoimporter": {"L4", "OS", "debug/elf", "go/constant", "go/token", "go/types", "internal/xcoff", "text/scanner"},
+	"go/internal/gccgoimporter": {"L4", "OS", "debug/elf", "go/constant", "go/token", "go/types", "github.com/c12o16h1/go/src/internal/xcoff", "text/scanner"},
 	"go/internal/srcimporter":   {"L4", "OS", "fmt", "go/ast", "go/build", "go/parser", "go/token", "go/types", "path/filepath"},
 	"go/types":                  {"L4", "GOPARSER", "container/heap", "go/constant"},
 
@@ -252,7 +252,7 @@ var pkgDeps = map[string][]string{
 	"compress/gzip":                  {"L4", "compress/flate"},
 	"compress/lzw":                   {"L4"},
 	"compress/zlib":                  {"L4", "compress/flate"},
-	"context":                        {"errors", "internal/reflectlite", "sync", "sync/atomic", "time"},
+	"context":                        {"errors", "github.com/c12o16h1/go/src/internal/reflectlite", "sync", "sync/atomic", "time"},
 	"database/sql":                   {"L4", "container/list", "context", "database/sql/driver", "database/sql/internal"},
 	"database/sql/driver":            {"L4", "context", "time", "database/sql/internal"},
 	"debug/dwarf":                    {"L4"},
@@ -271,7 +271,7 @@ var pkgDeps = map[string][]string{
 	"encoding/pem":                   {"L4"},
 	"encoding/xml":                   {"L4", "encoding"},
 	"flag":                           {"L4", "OS"},
-	"go/build":                       {"L4", "OS", "GOPARSER", "internal/goroot", "internal/goversion"},
+	"go/build":                       {"L4", "OS", "GOPARSER", "github.com/c12o16h1/go/src/internal/goroot", "github.com/c12o16h1/go/src/internal/goversion"},
 	"html":                           {"L4"},
 	"image/draw":                     {"L4", "image/internal/imageutil"},
 	"image/gif":                      {"L4", "compress/lzw", "image/color/palette", "image/draw"},
@@ -279,18 +279,18 @@ var pkgDeps = map[string][]string{
 	"image/jpeg":                     {"L4", "image/internal/imageutil"},
 	"image/png":                      {"L4", "compress/zlib"},
 	"index/suffixarray":              {"L4", "regexp"},
-	"internal/goroot":                {"L4", "OS"},
-	"internal/singleflight":          {"sync"},
-	"internal/trace":                 {"L4", "OS", "container/heap"},
-	"internal/xcoff":                 {"L4", "OS", "debug/dwarf"},
+	"github.com/c12o16h1/go/src/internal/goroot":                {"L4", "OS"},
+	"github.com/c12o16h1/go/src/internal/singleflight":          {"sync"},
+	"github.com/c12o16h1/go/src/internal/trace":                 {"L4", "OS", "container/heap"},
+	"github.com/c12o16h1/go/src/internal/xcoff":                 {"L4", "OS", "debug/dwarf"},
 	"math/big":                       {"L4"},
-	"mime":                           {"L4", "OS", "syscall", "internal/syscall/windows/registry"},
+	"mime":                           {"L4", "OS", "syscall", "github.com/c12o16h1/go/src/internal/syscall/windows/registry"},
 	"mime/quotedprintable":           {"L4"},
-	"net/internal/socktest":          {"L4", "OS", "syscall", "internal/syscall/windows"},
+	"net/internal/socktest":          {"L4", "OS", "syscall", "github.com/c12o16h1/go/src/internal/syscall/windows"},
 	"net/url":                        {"L4"},
 	"plugin":                         {"L0", "OS", "CGO"},
 	"runtime/pprof/internal/profile": {"L4", "OS", "compress/gzip", "regexp"},
-	"testing/internal/testdeps":      {"L4", "internal/testlog", "runtime/pprof", "regexp"},
+	"testing/internal/testdeps":      {"L4", "github.com/c12o16h1/go/src/internal/testlog", "runtime/pprof", "regexp"},
 	"text/scanner":                   {"L4", "OS"},
 	"text/template/parse":            {"L4"},
 
@@ -317,7 +317,7 @@ var pkgDeps = map[string][]string{
 	"runtime/msan": {"C"},
 
 	// Plan 9 alone needs io/ioutil and os.
-	"os/user": {"L4", "CGO", "io/ioutil", "os", "syscall", "internal/syscall/windows", "internal/syscall/windows/registry"},
+	"os/user": {"L4", "CGO", "io/ioutil", "os", "syscall", "github.com/c12o16h1/go/src/internal/syscall/windows", "github.com/c12o16h1/go/src/internal/syscall/windows/registry"},
 
 	// Internal package used only for testing.
 	"os/signal/internal/pty": {"CGO", "fmt", "os", "syscall"},
@@ -328,8 +328,8 @@ var pkgDeps = map[string][]string{
 	"net": {
 		"L0", "CGO",
 		"context", "math/rand", "os", "sort", "syscall", "time",
-		"internal/nettrace", "internal/poll", "internal/syscall/unix",
-		"internal/syscall/windows", "internal/singleflight", "internal/race",
+		"github.com/c12o16h1/go/src/internal/nettrace", "github.com/c12o16h1/go/src/internal/poll", "github.com/c12o16h1/go/src/internal/syscall/unix",
+		"github.com/c12o16h1/go/src/internal/syscall/windows", "github.com/c12o16h1/go/src/internal/singleflight", "github.com/c12o16h1/go/src/internal/race",
 		"golang.org/x/net/dns/dnsmessage", "golang.org/x/net/lif", "golang.org/x/net/route",
 	},
 
@@ -375,7 +375,7 @@ var pkgDeps = map[string][]string{
 	// Random byte, number generation.
 	// This would be part of core crypto except that it imports
 	// math/big, which imports fmt.
-	"crypto/rand": {"L4", "CRYPTO", "OS", "math/big", "syscall", "syscall/js", "internal/syscall/unix"},
+	"crypto/rand": {"L4", "CRYPTO", "OS", "math/big", "syscall", "syscall/js", "github.com/c12o16h1/go/src/internal/syscall/unix"},
 
 	// Not part of CRYPTO because it imports crypto/rand and crypto/sha512.
 	"crypto/ed25519":                       {"L3", "CRYPTO", "crypto/rand", "crypto/ed25519/internal/edwards25519"},
@@ -429,7 +429,7 @@ var pkgDeps = map[string][]string{
 		"golang.org/x/net/idna",
 		"golang.org/x/text/unicode/norm",
 		"golang.org/x/text/width",
-		"internal/nettrace",
+		"github.com/c12o16h1/go/src/internal/nettrace",
 		"mime/multipart",
 		"net/http/httptrace",
 		"net/http/internal",
@@ -437,7 +437,7 @@ var pkgDeps = map[string][]string{
 		"syscall/js",
 	},
 	"net/http/internal":  {"L4"},
-	"net/http/httptrace": {"context", "crypto/tls", "internal/nettrace", "net", "net/textproto", "reflect", "time"},
+	"net/http/httptrace": {"context", "crypto/tls", "github.com/c12o16h1/go/src/internal/nettrace", "net", "net/textproto", "reflect", "time"},
 
 	// HTTP-using packages.
 	"expvar":             {"L4", "OS", "encoding/json", "net/http"},

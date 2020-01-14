@@ -8,7 +8,7 @@ package net
 
 import (
 	"errors"
-	"internal/bytealg"
+	"github.com/c12o16h1/go/src/internal/bytealg"
 	"io"
 	"os"
 )

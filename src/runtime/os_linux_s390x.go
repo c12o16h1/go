@@ -4,7 +4,7 @@
 
 package runtime
 
-import "internal/cpu"
+import "github.com/c12o16h1/go/src/internal/cpu"
 
 const (
 	// bit masks taken from bits/hwcap.h

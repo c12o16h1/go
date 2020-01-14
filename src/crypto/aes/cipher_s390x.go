@@ -7,7 +7,7 @@ package aes
 import (
 	"crypto/cipher"
 	"crypto/internal/subtle"
-	"internal/cpu"
+	"github.com/c12o16h1/go/src/internal/cpu"
 )
 
 type code int

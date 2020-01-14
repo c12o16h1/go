@@ -5,7 +5,7 @@
 package syscall
 
 import (
-	"internal/syscall/windows/sysdll"
+	"github.com/c12o16h1/go/src/internal/syscall/windows/sysdll"
 	"sync"
 	"sync/atomic"
 	"unsafe"

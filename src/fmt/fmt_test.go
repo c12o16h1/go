@@ -7,7 +7,7 @@ package fmt_test
 import (
 	"bytes"
 	. "fmt"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"io"
 	"math"
 	"reflect"

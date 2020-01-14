@@ -8,7 +8,7 @@ package main
 
 import (
 	"context"
-	"internal/trace"
+	"github.com/c12o16h1/go/src/internal/trace"
 	"io/ioutil"
 	rtrace "runtime/trace"
 	"strings"

@@ -5,7 +5,7 @@
 package os
 
 import (
-	"internal/testlog"
+	"github.com/c12o16h1/go/src/internal/testlog"
 	"runtime"
 	"sync"
 	"sync/atomic"

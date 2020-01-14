@@ -9,7 +9,7 @@ package httptrace
 import (
 	"context"
 	"crypto/tls"
-	"internal/nettrace"
+	"github.com/c12o16h1/go/src/internal/nettrace"
 	"net"
 	"net/textproto"
 	"reflect"

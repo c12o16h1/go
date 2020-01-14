@@ -8,7 +8,7 @@ package doc
 
 import (
 	"bytes"
-	"internal/lazyregexp"
+	"github.com/c12o16h1/go/src/internal/lazyregexp"
 	"io"
 	"strings"
 	"text/template" // for HTMLEscape

@@ -7,8 +7,8 @@ package trace_test
 import (
 	"bytes"
 	"flag"
-	"internal/race"
-	"internal/trace"
+	"github.com/c12o16h1/go/src/internal/race"
+	"github.com/c12o16h1/go/src/internal/trace"
 	"io"
 	"io/ioutil"
 	"net"

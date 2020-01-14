@@ -6,8 +6,8 @@ package user
 
 import (
 	"fmt"
-	"internal/syscall/windows"
-	"internal/syscall/windows/registry"
+	"github.com/c12o16h1/go/src/internal/syscall/windows"
+	"github.com/c12o16h1/go/src/internal/syscall/windows/registry"
 	"syscall"
 	"unsafe"
 )

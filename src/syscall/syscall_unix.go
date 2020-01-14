@@ -7,8 +7,8 @@
 package syscall
 
 import (
-	"internal/oserror"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/oserror"
+	"github.com/c12o16h1/go/src/internal/race"
 	"runtime"
 	"sync"
 	"unsafe"

@@ -15,7 +15,7 @@ import (
 	"go/doc"
 	"go/parser"
 	"go/token"
-	"internal/lazytemplate"
+	"github.com/c12o16h1/go/src/internal/lazytemplate"
 	"path/filepath"
 	"sort"
 	"strings"

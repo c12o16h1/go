@@ -10,7 +10,7 @@ package os_test
 
 import (
 	"fmt"
-	"internal/poll"
+	"github.com/c12o16h1/go/src/internal/poll"
 	"io"
 	"io/ioutil"
 	"math/rand"

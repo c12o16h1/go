@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"internal/trace"
+	"github.com/c12o16h1/go/src/internal/trace"
 	"reflect"
 	. "runtime/trace"
 	"strings"

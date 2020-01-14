@@ -10,7 +10,7 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"io/ioutil"
 	"os"
 	"os/exec"

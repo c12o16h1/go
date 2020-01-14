@@ -10,7 +10,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"internal/poll"
+	"github.com/c12o16h1/go/src/internal/poll"
 	"io/ioutil"
 	"os"
 	"path"

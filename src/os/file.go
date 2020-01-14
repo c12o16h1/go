@@ -42,8 +42,8 @@ package os
 
 import (
 	"errors"
-	"internal/poll"
-	"internal/testlog"
+	"github.com/c12o16h1/go/src/internal/poll"
+	"github.com/c12o16h1/go/src/internal/testlog"
 	"io"
 	"runtime"
 	"syscall"

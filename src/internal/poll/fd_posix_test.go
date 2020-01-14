@@ -7,7 +7,7 @@
 package poll_test
 
 import (
-	. "internal/poll"
+	. "github.com/c12o16h1/go/src/internal/poll"
 	"io"
 	"testing"
 )

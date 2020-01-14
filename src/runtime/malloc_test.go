@@ -7,8 +7,8 @@ package runtime_test
 import (
 	"flag"
 	"fmt"
-	"internal/race"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/race"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"os"
 	"os/exec"
 	"reflect"

@@ -9,7 +9,7 @@ package doc
 import (
 	"go/ast"
 	"go/token"
-	"internal/lazyregexp"
+	"github.com/c12o16h1/go/src/internal/lazyregexp"
 	"path"
 	"sort"
 	"strconv"

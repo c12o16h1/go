@@ -9,7 +9,7 @@ import (
 	"flag"
 	"fmt"
 	"go/build"
-	"internal/testenv"
+	"github.com/c12o16h1/go/src/internal/testenv"
 	"io/ioutil"
 	"os"
 	"os/exec"
@@ -152,7 +152,7 @@ func TestSkipInternal(t *testing.T) {
 		{"net/http/internal-foo", true},
 		{"net/http/internal", false},
 		{"net/http/internal/bar", false},
-		{"internal/foo", false},
+		{"github.com/c12o16h1/go/src/internal/foo", false},
 		{"internal", false},
 	}
 	for _, tt := range tests {

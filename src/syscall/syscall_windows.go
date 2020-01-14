@@ -8,8 +8,8 @@ package syscall
 
 import (
 	errorspkg "errors"
-	"internal/oserror"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/oserror"
+	"github.com/c12o16h1/go/src/internal/race"
 	"runtime"
 	"sync"
 	"unicode/utf16"

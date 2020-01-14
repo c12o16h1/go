@@ -81,7 +81,7 @@ package net
 import (
 	"context"
 	"errors"
-	"internal/poll"
+	"github.com/c12o16h1/go/src/internal/poll"
 	"io"
 	"os"
 	"sync"

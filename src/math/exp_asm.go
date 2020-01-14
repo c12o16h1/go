@@ -6,6 +6,6 @@
 
 package math
 
-import "internal/cpu"
+import "github.com/c12o16h1/go/src/internal/cpu"
 
 var useFMA = cpu.X86.HasAVX && cpu.X86.HasFMA

@@ -11,7 +11,7 @@
 package sync
 
 import (
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"sync/atomic"
 	"unsafe"
 )

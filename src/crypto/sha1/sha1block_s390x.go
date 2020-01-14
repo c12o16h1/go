@@ -4,6 +4,6 @@
 
 package sha1
 
-import "internal/cpu"
+import "github.com/c12o16h1/go/src/internal/cpu"
 
 var useAsm = cpu.S390X.HasSHA1

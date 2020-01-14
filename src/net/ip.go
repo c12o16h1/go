@@ -12,7 +12,7 @@
 
 package net
 
-import "internal/bytealg"
+import "github.com/c12o16h1/go/src/internal/bytealg"
 
 // IP address lengths (bytes).
 const (

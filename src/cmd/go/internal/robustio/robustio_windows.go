@@ -6,7 +6,7 @@ package robustio
 
 import (
 	"errors"
-	"internal/syscall/windows"
+	"github.com/c12o16h1/go/src/internal/syscall/windows"
 	"syscall"
 )
 

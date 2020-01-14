@@ -9,7 +9,7 @@ import (
 	"encoding/gob"
 	"encoding/json"
 	"fmt"
-	"internal/race"
+	"github.com/c12o16h1/go/src/internal/race"
 	"math/big"
 	"math/rand"
 	"os"

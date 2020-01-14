@@ -13,7 +13,7 @@ package testenv
 import (
 	"errors"
 	"flag"
-	"internal/cfg"
+	"github.com/c12o16h1/go/src/internal/cfg"
 	"os"
 	"os/exec"
 	"path/filepath"

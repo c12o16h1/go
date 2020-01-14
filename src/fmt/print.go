@@ -5,7 +5,7 @@
 package fmt
 
 import (
-	"internal/fmtsort"
+	"github.com/c12o16h1/go/src/internal/fmtsort"
 	"io"
 	"os"
 	"reflect"
