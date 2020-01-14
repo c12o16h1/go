@@ -6,12 +6,13 @@ package template
 
 import (
 	"fmt"
-	"internal/fmtsort"
 	"io"
 	"reflect"
 	"runtime"
 	"strings"
 	"text/template/parse"
+
+	"github.com/c12o16h1/go/src/internal/fmtsort"
 )
 
 // maxExecDepth specifies the maximum stack depth of templates within
